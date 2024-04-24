@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="618.0" style="-fx-background-color: #4065FC;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.LoginController">
+
+                    <children>
+                        <ImageView fitHeight="418.0" fitWidth="640.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@11798732_4851108.jpg" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="loginUsernameText" layoutX="219.0" layoutY="126.0" prefHeight="26.0" prefWidth="181.0" />
+                        <PasswordField fx:id="loginPasswordText" layoutX="219.0" layoutY="161.0" prefHeight="26.0" prefWidth="182.0" />
+                        <RadioButton fx:id="pharmacyRadioLogin" layoutX="271.0" layoutY="201.0" mnemonicParsing="false" onAction="#handlePharmacyRadioLogin" text="FARMACIE" />
+                        <RadioButton fx:id="sectionRadioLogin" layoutX="281.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleSectionRadioLogin" text="SECTIE" />
+                        <RadioButton fx:id="adminRadioLogin" layoutX="279.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleAdminRadoLogin" text="ADMIN" />
+                        <Button fx:id="loginBut" layoutX="272.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="38.0" prefWidth="74.0" text="LOGIN" />
+                    </children>
+</AnchorPane>

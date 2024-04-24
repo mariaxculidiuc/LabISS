@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.AdminController">
+    <children>
+        <ImageView fitHeight="694.0" fitWidth="862.0" layoutX="-23.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@11798732_4851108.jpg" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="260.0" layoutY="30.0" prefHeight="35.0" prefWidth="273.0" text="MEDICAMENTE" textFill="#909090">
+            <font>
+                <Font name="Britannic Bold" size="39.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nameTextField" layoutX="35.0" layoutY="465.0" prefHeight="26.0" prefWidth="191.0" />
+        <TextField fx:id="priceTextField" layoutX="260.0" layoutY="465.0" prefHeight="26.0" prefWidth="191.0" />
+        <TableView fx:id="tableViewDrugs" layoutX="35.0" layoutY="105.0" prefHeight="347.0" prefWidth="351.0">
+            <columns>
+                <TableColumn fx:id="tableColumnName" prefWidth="108.80005168914795" text="Nume" />
+                <TableColumn fx:id="tableColumnPrice" prefWidth="96.00006103515625" text="Pret" />
+                <TableColumn fx:id="tableColumnDescription" prefWidth="143.19997253417966" text="Descriere" />
+            </columns>
+        </TableView>
+        <TextField fx:id="descriptionTextField" layoutX="480.0" layoutY="465.0" prefHeight="26.0" prefWidth="191.0" />
+        <Button layoutX="514.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="26.0" prefWidth="62.0" text="Logout" />
+      <Button layoutX="105.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleAddDrug" text="Adauga" />
+      <Button layoutX="235.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleDeleteDrug" text="Sterge" />
+      <Button layoutX="363.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleUpdateDrug" prefHeight="26.0" prefWidth="90.0" text="Actualizeaza" />
+      <Label layoutX="519.0" layoutY="177.0" text="SAU... CREEAZA UN CONT!" />
+        <TextField fx:id="signupUsernameText" layoutX="485.0" layoutY="212.0" prefHeight="26.0" prefWidth="181.0" />
+        <PasswordField fx:id="signupPasswordText" layoutX="485.0" layoutY="246.0" prefHeight="26.0" prefWidth="182.0" />
+        <RadioButton fx:id="pharmacyRadioSignup" layoutX="540.0" layoutY="278.0" mnemonicParsing="false" onAction="#handlePharmacyRadioSignup" prefHeight="18.0" prefWidth="82.0" text="FARMACIE" />
+        <RadioButton fx:id="sectionRadioSignup" layoutX="539.0" layoutY="299.0" mnemonicParsing="false" onAction="#handleSectionRadioSignup" prefHeight="18.0" prefWidth="74.0" text="SECTIE" />
+        <RadioButton fx:id="adminRadioSignup" layoutX="540.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleAdminRadoSignup" prefHeight="18.0" prefWidth="61.0" text="ADMIN" />
+        <Button fx:id="signupBut" layoutX="510.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleSignup" prefHeight="38.0" prefWidth="121.0" text="SIGNUP" />
+    </children>
+</AnchorPane>
