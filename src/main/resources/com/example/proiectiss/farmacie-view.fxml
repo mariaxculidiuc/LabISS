@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.FarmacieController">
+    <children>
+        <ImageView fitHeight="694.0" fitWidth="862.0" layoutX="-23.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@11798732_4851108.jpg" />
+            </image>
+        </ImageView>
+                        <TableView fx:id="tableViewComenzi" layoutX="29.0" layoutY="76.0" prefHeight="294.0" prefWidth="358.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnSectie" prefWidth="206.5" text="Sectie" />
+                                <TableColumn fx:id="tableColumnCantitate" prefWidth="62.5" text="Cantitate" />
+                                <TableColumn fx:id="tableColumnStatus" prefWidth="87.0" text="Status" />
+                            </columns>
+                        </TableView>
+
+                        <TableView fx:id="tableViewMedicamenteComandate" layoutX="421.0" layoutY="76.0" prefHeight="294.0" prefWidth="221.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnMedNume" prefWidth="99.99999618530273" text="Medicament" />
+                                <TableColumn fx:id="tableColumnMedCantitate" prefWidth="115.99998474121094" text="Cantitate" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="224.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleOnoreazaComanda" prefHeight="31.0" prefWidth="93.0" text="Onoreaza" />
+                        <Button layoutX="352.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleRefuzaComanda" prefHeight="31.0" prefWidth="93.0" text="Refuza" />
+
+        <Button layoutX="305.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="31.0" prefWidth="74.0" text="Logout" />
+    </children>
+</AnchorPane>
