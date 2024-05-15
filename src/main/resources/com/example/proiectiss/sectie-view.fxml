@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.SectieController">
+    <children>
+        <ImageView fitHeight="694.0" fitWidth="862.0" layoutX="-23.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@11798732_4851108.jpg" />
+            </image>
+        </ImageView>
+                        <TableView fx:id="tableViewMedicamente" layoutX="15.0" layoutY="62.0" prefHeight="256.0" prefWidth="310.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnNume" prefWidth="113.60000324249268" text="Nume" />
+                                <TableColumn fx:id="tableColumnPret" prefWidth="65.60003662109375" text="Pret" />
+                                <TableColumn fx:id="tableColumnDescriere" prefWidth="129.59999084472656" text="Descriere" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="cantitateText" layoutX="91.0" layoutY="336.0" prefHeight="20.0" prefWidth="118.0" promptText="Cantitate" />
+                        <Button layoutX="220.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleAddMedicamentLaComanda" prefHeight="25.0" prefWidth="125.0" text="Adauga la comanda" />
+
+                        <TableView fx:id="tableMedicamenteComandate" layoutX="391.0" layoutY="62.0" prefHeight="275.0" prefWidth="230.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnMedNume" prefWidth="113.60000324249268" text="Nume medicament" />
+                                <TableColumn fx:id="tableColumnMedCant" prefWidth="115.19998779296876" text="Cantitate" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="467.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleAddComanda" prefHeight="48.0" prefWidth="78.0" text="Submit" />
+                        <Button layoutX="128.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleRemoveMedicamentComandat" prefHeight="26.0" prefWidth="62.0" text="Cancel" />
+
+        <Button layoutX="373.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="33.0" prefWidth="78.0" text="Logout" />
+        <Button layoutX="212.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleComenzi" prefHeight="33.0" prefWidth="118.0" text="Comenzile tale" />
+    </children>
+</AnchorPane>

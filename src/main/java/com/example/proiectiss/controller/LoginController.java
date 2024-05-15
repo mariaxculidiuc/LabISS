@@ -72,24 +72,22 @@ public class LoginController {
             this.rootUser = services.login(rootUser);
 
             if(typeUser.equals(TipUtilizator.SECTIE)) {
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("sectie-view.fxml"));
-                Parent root = loader.load();
+                FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource("/com/example/proiectiss/sectie-view.fxml"));
+                Parent root = fxmlLoader.load();
                 Scene newScene = new Scene(root);
                 mainStage.setScene(newScene);
-                SectieController sectionController = loader.getController();
-                //sectionController.setServices(mainStage, services, this.rootUser);
+                SectieController sectionController = fxmlLoader.getController();
+                sectionController.setServices(mainStage, services, this.rootUser);
                 mainStage.show();
             }
             else
             if(typeUser.equals(TipUtilizator.FARMACIE)) {
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("farmacie-view.fxml"));
-                Parent root = loader.load();
+                FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource("/com/example/proiectiss/farmacie-view.fxml"));
+                Parent root = fxmlLoader.load();
                 Scene newScene = new Scene(root);
                 mainStage.setScene(newScene);
-                FarmacieController pharmacyController = loader.getController();
-                //pharmacyController.setServices(mainStage, services, this.rootUser);
+                FarmacieController pharmacyController = fxmlLoader.getController();
+                pharmacyController.setServices(mainStage, services, this.rootUser);
                 mainStage.show();
             }
             else
@@ -113,41 +111,6 @@ public class LoginController {
         }
     }
 
-    @FXML
-    void handleSignup(){
-        String username = signupUsernameText.getText();
-        String password = signupPasswordText.getText();
-        String confirmPassword = signupConfirmPasswordText.getText();
-        if(!confirmPassword.equals(password)){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Travel Agency");
-            alert.setHeaderText("Authentication failure");
-            alert.setContentText("Password doesn't match !");
-            alert.showAndWait();
-            signupUsernameText.clear();
-            signupPasswordText.clear();
-            signupConfirmPasswordText.clear();
-            clearSignup();
-            return;
-        }
-        try{
-            Utilizator signupUser = new Utilizator(username, password, typeUserSignup);
-            services.signUp(signupUser);
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Hospital");
-            alert.setHeaderText("Registration");
-            alert.setContentText("The user was registered !");
-            alert.showAndWait();
-            clearSignup();
-        }catch (ValidationException ex){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Travel Agency");
-            alert.setHeaderText("Authentication failure");
-            alert.setContentText(ex.getMessage());
-            alert.showAndWait();
-            clearSignup();
-        }
-    }
 
     private void clearLogin(){
         loginUsernameText.clear();

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.ComandaSectieController">
+    <children>
+        <ImageView fitHeight="694.0" fitWidth="862.0" layoutX="-23.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@11798732_4851108.jpg" />
+            </image>
+        </ImageView>
+        <ListView fx:id="listViewComenzi" layoutX="36.0" layoutY="40.0" prefHeight="311.0" prefWidth="233.0" />
+        <ListView fx:id="listViewComenziFacute" layoutX="376.0" layoutY="40.0" prefHeight="311.0" prefWidth="233.0" />
+        <Button layoutX="175.0" layoutY="378.0" mnemonicParsing="false" onAction="#filterComenziRefuzate" prefHeight="25.0" prefWidth="66.0" text="Refuzate" />
+        <Button layoutX="408.0" layoutY="378.0" mnemonicParsing="false" onAction="#filterComenziOnorate" prefHeight="25.0" prefWidth="60.0" text="Onorate" />
+        <Button layoutX="287.0" layoutY="378.0" mnemonicParsing="false" onAction="#filterPendingOrders" prefHeight="25.0" prefWidth="66.0" text="Pending" />
+        <Button layoutX="290.0" layoutY="414.0" mnemonicParsing="false" onAction="#handleQuit" prefHeight="25.0" prefWidth="60.0" text="Inapoi">
+        </Button>
+    </children>
+</AnchorPane>

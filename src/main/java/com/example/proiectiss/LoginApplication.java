@@ -31,8 +31,8 @@ public class LoginApplication extends Application {
         }
         IUtilizatorRepository userRepository = new UtilizatorDBRepository(props);
         IMedicamentRepository medicamentRepository = new MedicamentDBRepository(props);
-        IComandaRepository comandaRepository = new ComandaDBRepository(props);
-        IMedicamentComandatRepository medicamentComandatRepository = new MedicamentComandatDBRepository(props);
+        IComandaRepository comandaRepository = new ComandaDBRepository(props,userRepository);
+        IMedicamentComandatRepository medicamentComandatRepository = new MedicamentComandatDBRepository(props,medicamentRepository,comandaRepository);
         service = new Service(userRepository,medicamentRepository,comandaRepository,medicamentComandatRepository);
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
